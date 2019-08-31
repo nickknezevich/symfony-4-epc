@@ -54,6 +54,7 @@ class ProductController extends ApiWrapper
      */
     public function create(Request $request, ProductRepository $productRepository, EntityManagerInterface $em, ValidatorInterface $validator)
     {
+
         $violations = $this->_validate($request, $validator);
         if ($violations->count() > 0) {
             $formatedViolationList = [];

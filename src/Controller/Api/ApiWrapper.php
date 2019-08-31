@@ -105,8 +105,20 @@ class ApiWrapper extends FOSRestController
      */
     public function respondNotFound($message = 'Not found!')
     {
-        $this->_log($message);
         return $this->setStatusCode(404)->respondWithErrors($message);
+    }
+
+    /**
+     * Returns a 400 Bad Request
+     *
+     * @param string $message
+     *
+     * @return Symfony\Component\HttpFoundation\JsonResponse
+     */
+    public function respondBadRequest($message = 'Bad request!')
+    {
+        $this->_log($message);
+        return $this->setStatusCode(400)->respondWithErrors($message);
     }
 
     /**
