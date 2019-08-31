@@ -1,0 +1,496 @@
+{
+	"info": {
+		"_postman_id": "94e72c0f-299e-465f-a105-427436d2b947",
+		"name": "epc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "local.api",
+			"item": [
+				{
+					"name": "customers",
+					"item": [
+						{
+							"name": "/api/customers",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "NmY5M2VlMmZmZmNkNWIyN2FjMjI5OWFkMWM5ZGJiY2M3MjA3NGVmN2ZkNDFlYzMxZWM3NTRhMGYwNjY5OTBhMw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"first_name\": \"Bengalski\",\r\n    \"age\": 34\r\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/customers",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"customers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/api/customers",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "Mzg1ZjRkNWU2ZGE1ZGI2NDU3NGUxMjMxMWVlNTNiNDM2YzBlYmViYzFlNDhlZjc2NDUyNDVkM2JjZTUxYjc1ZA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/customers",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"customers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/api/customers/{id}",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "Mzg1ZjRkNWU2ZGE1ZGI2NDU3NGUxMjMxMWVlNTNiNDM2YzBlYmViYzFlNDhlZjc2NDUyNDVkM2JjZTUxYjc1ZA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/customers/6",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/api/customers/{id}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/customers/8",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/api/customers/{id}",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"first_name\": \"Emil\",\r\n    \"last_name\": \"Bruneski\",\r\n    \"age\": 34,\r\n    \"status\": \"new\"\r\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/customers/7",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"customers",
+										"7"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "products",
+					"item": [
+						{
+							"name": "/api/products",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "OTA0YzdiMzdiZGU3N2E0NjE0Y2ZhMTc1MjgyODQ5MmE4NDdiMDBhODdlMmI2NWRjNzZjYTUzYmJmYjc5YjMxZQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 4547,\r\n    \"name\": \"Some Awesome product\",\r\n    \"asin\": \"3756152995\",\r\n    \"uuid\": \"8cabee94-1dca-30c7-8027-0395acfba5cf\",\r\n    \"status\": \"new\"\r\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/products",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/api/products/{id}",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "OTA0YzdiMzdiZGU3N2E0NjE0Y2ZhMTc1MjgyODQ5MmE4NDdiMDBhODdlMmI2NWRjNzZjYTUzYmJmYjc5YjMxZQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/products/5",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"products",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/api/products",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "OTA0YzdiMzdiZGU3N2E0NjE0Y2ZhMTc1MjgyODQ5MmE4NDdiMDBhODdlMmI2NWRjNzZjYTUzYmJmYjc5YjMxZQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/products",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/api/products/{id}",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "OTA0YzdiMzdiZGU3N2E0NjE0Y2ZhMTc1MjgyODQ5MmE4NDdiMDBhODdlMmI2NWRjNzZjYTUzYmJmYjc5YjMxZQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"some product name\",\r\n    \"asin\": \"020530902X\",\r\n    \"uuid\": \"123e4567-e89b-12d3-a456-426655440000\",\r\n    \"customer\": 12010,\r\n    \"status\": \"pending\"\r\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/products/4928",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"products",
+										"4928"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/api/products/{id}",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "OTA0YzdiMzdiZGU3N2E0NjE0Y2ZhMTc1MjgyODQ5MmE4NDdiMDBhODdlMmI2NWRjNzZjYTUzYmJmYjc5YjMxZQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/products/4928",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"products",
+										"4928"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "/oauth/createClient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"redirect-uri\": \"http://127.0.0.1:8000/\",\n\t\"grant-type\": \"password\"\n}"
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/oauth/createClient",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"oauth",
+								"createClient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/oauth/v2/token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"client_id\": \"2_65rr0pbxbeccogk8o0cwswg84cw0gkwws4soko8w8ggw8kco4g\",\n    \"client_secret\": \"4h5b9ywkgp44gkss8ks4ogg4gkc4kcgkkss0gk88g4occckws4\",\n    \"grant_type\": \"password\",\n    \"username\": \"admin\",\n    \"password\": \"nikola1977\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/oauth/v2/token",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"oauth",
+								"v2",
+								"token"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
